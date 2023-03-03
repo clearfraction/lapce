@@ -1,5 +1,5 @@
 Name:           lapce
-Version:        0.2.5
+Version:        0.2.6
 Release:        1
 URL:            https://github.com/lapce
 Source0:        https://github.com/lapce/lapce/archive/refs/tags/v%{version}.tar.gz
