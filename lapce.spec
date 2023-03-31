@@ -1,5 +1,5 @@
 Name:           lapce
-Version:        0.2.6
+Version:        %(unset https_proxy && curl -s https://api.github.com/repos/lapce/lapce/releases/latest | grep -oP '"tag_name": "v\K(.*)(?=")')
 Release:        1
 URL:            https://github.com/lapce
 Source0:        https://github.com/lapce/lapce/archive/refs/tags/v%{version}.tar.gz
