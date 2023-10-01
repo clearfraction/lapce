@@ -44,6 +44,7 @@ install -D -m755 target/release-lto/lapce-proxy %{buildroot}/usr/bin/lapce-proxy
 install -Dm 0644 extra/linux/dev.lapce.lapce.metainfo.xml %{buildroot}/usr/share/metainfo/dev.lapce.lapce.metainfo.xml
 install -Dm 0644 extra/linux/dev.lapce.lapce.desktop %{buildroot}/usr/share/applications/dev.lapce.lapce.desktop
 install -Dm 0644 extra/images/logo.png %{buildroot}/usr/share/pixmaps/dev.lapce.lapce.png
+strip --strip-debug %{buildroot}/usr/bin/*
 
 %files
 %defattr(-,root,root,-)
