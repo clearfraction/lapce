@@ -2,7 +2,8 @@ Name:           lapce
 Version:        %(unset https_proxy && curl -s https://api.github.com/repos/lapce/lapce/releases/latest | grep -oP '"tag_name": "v\K(.*)(?=")')
 Release:        1
 URL:            https://github.com/lapce
-Source0:        https://github.com/lapce/lapce/archive/refs/tags/v%{version}.tar.gz
+#Source0:        https://github.com/lapce/lapce/archive/refs/tags/v%%{version}.tar.gz
+Source0:        https://github.com/lapce/lapce/archive/refs/heads/master.tar.gz
 Summary:        Lightning-fast and Powerful Code Editor written in Rust
 License:        Apache-2.0
 BuildRequires:  rustc
@@ -28,7 +29,8 @@ Lightning-fast and Powerful Code Editor written in Rust
 
 
 %prep
-%setup -q -n lapce-%{version}
+# lapce-%{version}
+%setup -q -n lapce-master
 sed -i 's/master#eff3e0f57512ecb2e72024732d66dba64bdeaec/lapce#2ad4c9b79e0f213b61dbb3820754bfc6306e595a/' Cargo.lock
 
 
